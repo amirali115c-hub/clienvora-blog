@@ -11,47 +11,33 @@ type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
+<!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
+			main { max-width: 800px; margin: 4rem auto; padding: 0 2rem; }
+			
+			.hero-image { margin-bottom: 3rem; }
+			.hero-image img { width: 100%; border-radius: 8px; height: auto; }
+
+			.title { margin-bottom: 3rem; text-align: left; }
+			.title h1 { font-size: 2.75rem; line-height: 1.2; margin-bottom: 1rem; color: #111; letter-spacing: -0.02em; }
+			
+			.date { font-size: 0.9rem; color: #888; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.1em; }
+			.last-updated-on { font-style: italic; font-size: 0.8rem; margin-top: 0.5rem; }
+			
 			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
+				font-size: 1.15rem;
+				line-height: 1.8;
+				color: #333;
 			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
+			
+			/* Ensure headings inside the post look good */
+			.prose :global(h2) { margin-top: 2.5rem; color: #111; }
+			.prose :global(p) { margin-bottom: 1.5rem; }
+			
+			hr { border: 0; border-top: 1px solid #eee; margin: 3rem 0; }
 		</style>
 	</head>
 
@@ -75,7 +61,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 							}
 						</div>
 						<h1>{title}</h1>
-						<hr />
 					</div>
 					<slot />
 				</div>

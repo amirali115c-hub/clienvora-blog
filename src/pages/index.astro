@@ -1,49 +1,95 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+<head>
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	<style>
+		/* Layout & Spacing */
+		main { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+		section { margin-bottom: 8rem; }
+		
+		/* Hero */
+		.hero-section { padding: 6rem 0; }
+		.hero-section h1 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.04em; color: #111; line-height: 1.1; margin-bottom: 1.5rem; }
+		.hero-section p { font-size: 1.25rem; color: #444; max-width: 700px; line-height: 1.6; }
+
+		/* Section Titles */
+		.section-title { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 3rem; display: flex; align-items: center; gap: 1.5rem; }
+		.section-title::after { content: ''; flex-grow: 1; height: 1px; background: #eee; }
+
+		/* Grid & Cards */
+		.services-grid, .insights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+		.card { 
+			padding: 2.5rem; border: 1px solid #f0f0f0; border-radius: 12px; 
+			transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); background: #fff;
+			display: flex; flex-direction: column;
+		}
+		.card:hover { border-color: #e0e0e0; box-shadow: 0 20px 40px rgba(0,0,0,0.06); transform: translateY(-8px); }
+		
+		.card h3, .card h2 { font-size: 1.5rem; margin-bottom: 1rem; color: #111; }
+		.card p { color: #666; font-size: 0.95rem; line-height: 1.6; flex-grow: 1; }
+		
+		.link-style { display: inline-block; margin-top: 2rem; font-size: 0.8rem; font-weight: 700; color: #000; text-decoration: none; border-bottom: 2px solid #000; padding-bottom: 2px; align-self: flex-start; }
+
+		/* Meta & Buttons */
+		.meta-date { font-size: 0.85rem; color: #999; margin-bottom: 1rem; display: block; }
+		.archive-btn { background: #111; color: #fff; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 500; text-decoration: none; transition: background 0.3s; }
+		.archive-btn:hover { background: #333; }
+		.archive-wrapper { text-align: center; margin-top: 4rem; }
+	</style>
+</head>
+<body>
+	<Header />
+	<main>
+		<section class="hero-section">
+			<h1>Strategy. Design. Impact.</h1>
+			<p>We engineer organic conversion frameworks and data-backed architecture to map high-ticket B2B assets cleanly in front of enterprise decision makers.</p>
+		</section>
+
+		<section>
+			<h2 class="section-title">Capabilities</h2>
+			<div class="services-grid">
+				<div class="card">
+					<h3>Technical SEO Strategies</h3>
+					<p>Maximizing indexation architecture and crawl path efficiencies so search engines surface your critical insights fast.</p>
+					<a href="https://www.clienvora.com/p/seo-services.html" class="link-style">Explore SEO Services</a>
+				</div>
+				<div class="card">
+					<h3>Conversion Copywriting</h3>
+					<p>Translating structural business features into elegant, value-focused narratives that drive pipeline conversion metrics.</p>
+					<a href="https://www.clienvora.com/p/copywriting-services.html" class="link-style">Explore Copywriting Services</a>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="section-title">Latest Strategic Insights</h2>
+			<div class="insights-grid">
+				{posts.slice(0, 2).map((post) => (
+					<article class="card">
+						<span class="meta-date">{post.data.pubDate.toLocaleDateString()}</span>
+						<h2><a href={`/blog/${post.id}/`} style="text-decoration: none; color: inherit;">{post.data.title}</a></h2>
+						<p>{post.data.description}</p>
+						<a href={`/blog/${post.id}/`} class="link-style">Read Strategy</a>
+					</article>
+				))}
+			</div>
+			<div class="archive-wrapper">
+				<a href="/blog/" class="archive-btn">View All Insights</a>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</body>
 </html>
