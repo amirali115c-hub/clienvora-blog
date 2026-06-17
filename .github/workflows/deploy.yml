@@ -13,5 +13,7 @@ jobs:
           node-version: 22
       - name: Install and Build
         uses: withastro/action@v3
+        with:
+          package-manager: npm
       - name: Deploy
         uses: actions/deploy-pages@v4
