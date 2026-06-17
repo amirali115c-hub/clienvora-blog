@@ -1,12 +1,12 @@
 // @ts-check
-
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	site: 'https://amirali115c-hub.github.io',
+	base: '/clienvora-blog/',
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{
