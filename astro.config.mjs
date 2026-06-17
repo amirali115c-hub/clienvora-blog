@@ -1,35 +1,20 @@
 // @ts-check
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-import { defineConfig, fontProviders } from 'astro/config';
+import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://amirali115c-hub.github.io',
-	base: '/clienvora-blog/',
-	integrations: [mdx(), sitemap()],
-	fonts: [
-		{
-			provider: fontProviders.local(),
-			name: 'Atkinson',
-			cssVariable: '--font-atkinson',
-			fallbacks: ['sans-serif'],
-			options: {
-				variants: [
-					{
-						src: ['./src/assets/fonts/atkinson-regular.woff'],
-						weight: 400,
-						style: 'normal',
-						display: 'swap',
-					},
-					{
-						src: ['./src/assets/fonts/atkinson-bold.woff'],
-						weight: 700,
-						style: 'normal',
-						display: 'swap',
-					},
-				],
-			},
-		},
-	],
+    // Ensure this matches the URL where your site is hosted
+    site: 'https://amirali115c-hub.github.io',
+    
+    // This MUST match your repository name exactly (e.g., /squealing-star/)
+    // This setting resolves your 404 errors by telling Astro where the site lives.
+    base: '/clienvora-blog/',
+    
+    integrations: [mdx(), sitemap()],
+    
+    // We removed the 'fonts' object because it is likely causing build issues.
+    // If you want to use custom fonts, it is safer to import them via CSS 
+    // in your src/styles/global.css file.
 });
