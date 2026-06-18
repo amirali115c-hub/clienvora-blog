@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amirali115c-hub.github.io/clienvora-blog/sitemap-index.xml

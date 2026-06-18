@@ -13,15 +13,32 @@ interface Props {
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-
 const { title, description, image = FallbackImage } = Astro.props;
+
+// JSON-LD Structured Data for SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "image": new URL(image.src, Astro.site),
+  "author": {
+    "@type": "Person",
+    "name": "Amir Ali" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": SITE_TITLE,
+    "url": Astro.site
+  }
+};
 ---
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" href="/favicon.ico" />
-<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="sitemap" href={new URL('sitemap-index.xml', Astro.site)} />
 <link
 	rel="alternate"
 	type="application/rss+xml"
@@ -32,7 +49,7 @@ const { title, description, image = FallbackImage } = Astro.props;
 
 <link rel="canonical" href={canonicalURL} />
 
-<title>{title}</title>
+<title>{title} | {SITE_TITLE}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
@@ -47,3 +64,5 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
