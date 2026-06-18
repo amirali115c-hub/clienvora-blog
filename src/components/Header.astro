@@ -1,44 +1,55 @@
 ---
-import { SITE_TITLE } from '../consts';
-import HeaderLink from './HeaderLink.astro';
+const today = new Date();
+const base = import.meta.env.BASE_URL;
 ---
 
-<header>
-	<nav>
-		<h2 class="brand"><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-		</div>
-		<div class="social-links">
-			<a href="https://github.com/amirali115c-hub" target="_blank" rel="noopener noreferrer">GitHub</a>
-			<a href="https://wa.me/923204779972" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-			<a href="https://www.clienvora.com" target="_blank" rel="noopener noreferrer">Website</a>
-		</div>
-	</nav>
-</header>
+<footer>
+	<div class="footer-container">
+		<p>&copy; {today.getFullYear()} Clienvora. All rights reserved.</p>
+		
+		<nav class="footer-links">
+			<a href={base}>Home</a>
+			<a href={base + 'blog'}>Blog</a>
+			<a href={base + 'about'}>About</a>
+			<a href="https://www.clienvora.com" target="_blank" rel="noopener">Website</a>
+			<a href="https://wa.me/923204779972" target="_blank" rel="noopener">WhatsApp</a>
+			<a href="https://github.com/amirali115c-hub" target="_blank" rel="noopener">GitHub</a>
+		</nav>
+	</div>
+</footer>
 
 <style>
-	header {
-		margin: 0;
-		padding: 0 2rem;
+	footer {
+		padding: 4rem 2rem;
+		margin-top: 6rem;
+		border-top: 1px solid #f0f0f0;
+		text-align: center;
 		background: #fff;
-		border-bottom: 1px solid #f0f0f0;
 	}
-	.brand { font-size: 1.25rem; font-weight: 700; margin: 0; }
-	.brand a { text-decoration: none; color: #000; }
+	.footer-container { max-width: 800px; margin: 0 auto; }
 	
-	nav { display: flex; align-items: center; justify-content: space-between; height: 80px; }
+	p { color: #888; font-size: 0.8rem; margin-bottom: 1.5rem; }
 	
-	.internal-links a { margin-right: 1.5rem; text-decoration: none; color: #666; font-size: 0.9rem; }
-	.internal-links a:hover { color: #000; }
+	.footer-links { 
+		display: flex; 
+		justify-content: center; 
+		flex-wrap: wrap;
+		gap: 2rem; 
+	}
 	
-	.social-links { display: flex; gap: 1.5rem; }
-	.social-links a { text-decoration: none; color: #000; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
-	.social-links a:hover { opacity: 0.7; }
+	.footer-links a { 
+		color: #333; 
+		text-decoration: none; 
+		font-size: 0.85rem; 
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		transition: opacity 0.2s;
+	}
+	
+	.footer-links a:hover { opacity: 0.6; }
 
-	@media (max-width: 720px) {
-		.social-links { display: none; }
+	@media (max-width: 600px) {
+		.footer-links { gap: 1rem; }
 	}
 </style>
