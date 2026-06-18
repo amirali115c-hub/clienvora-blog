@@ -1,7 +1,16 @@
-/* Keep this as an import */
 @import "tailwindcss";
-
-/* Change these to @plugin */
 @plugin "@tailwindcss/typography";
-@plugin "@tailwindcss/forms";
-@plugin "@tailwindcss/container-queries";
+
+@theme {
+  /* Define your brand's strict palette */
+  --color-text-primary: #111111;
+  --color-text-muted: #666666;
+  --color-bg-border: #eeeeee;
+  --font-headings: 'Inter', sans-serif; /* Add your font here */
+}
+
+/* Base resets to match your old theme */
+body {
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
