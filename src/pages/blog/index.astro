@@ -7,105 +7,78 @@ import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
-const posts = (await getCollection('blog')).sort(
+const allPosts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+
+const [featuredPost, ...morePosts] = allPosts;
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			main {
-				width: 960px;
-			}
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			ul li {
-				width: calc(50% - 1rem);
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1;
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
-			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
-			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
-				}
-			}
-		</style>
+		<BaseHead title={`Blog | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
 	</head>
-	<body>
+	<body class="bg-white text-black">
 		<Header />
-		<main>
+		<main class="max-w-[1000px] mx-auto px-8 py-16">
+			<section class="mb-20">
+				<h1 class="text-[3rem] font-medium tracking-tight mb-6">Strategic Insights</h1>
+				<p class="text-xl text-gray-600 max-w-2xl">Expert frameworks on technical SEO, conversion architecture, and high-ticket B2B growth strategies.</p>
+			</section>
+
+			{featuredPost && (
+				<section class="mb-20">
+					<a href={`${base}blog/${featuredPost.id}/`} class="group block">
+						{featuredPost.data.heroImage && (
+							<div class="relative overflow-hidden rounded-2xl mb-8">
+								<Image 
+									width={1200} 
+									height={600} 
+									src={featuredPost.data.heroImage} 
+									alt={featuredPost.data.title || ""}
+									class="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105"
+								/>
+							</div>
+						)}
+						<div class="max-w-3xl">
+							<span class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-3 block">Featured</span>
+							<h2 class="text-[2.5rem] leading-tight font-medium mb-4 group-hover:text-gray-600 transition">{featuredPost.data.title}</h2>
+							<p class="text-lg text-gray-600 mb-4">{featuredPost.data.description}</p>
+							<p class="text-sm text-gray-500 font-medium">
+								<FormattedDate date={featuredPost.data.pubDate} />
+							</p>
+						</div>
+					</a>
+				</section>
+			)}
+
 			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`${import.meta.env.BASE_URL}blog/${post.id}/`}>
-									{post.data.heroImage && (
-										<Image width={720} height={360} src={post.data.heroImage} alt="" />
-									)}
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
-								</a>
-							</li>
-						))
-					}
+				<h3 class="text-sm uppercase tracking-[0.2em] text-gray-400 mb-10 border-b border-gray-100 pb-4">More Insights</h3>
+				<ul class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16 list-none p-0 m-0">
+					{morePosts.map((post) => (
+						<li class="flex flex-col">
+							<a href={`${base}blog/${post.id}/`} class="group block">
+								{post.data.heroImage && (
+									<div class="overflow-hidden rounded-xl mb-6">
+										<Image 
+											width={720} 
+											height={360} 
+											src={post.data.heroImage} 
+											alt={post.data.title || ""}
+											class="w-full h-[240px] object-cover transition-transform duration-500 group-hover:scale-105"
+										/>
+									</div>
+								)}
+								<h4 class="text-[1.5rem] font-medium leading-snug mb-3 group-hover:opacity-70 transition">
+									{post.data.title}
+								</h4>
+								<p class="text-gray-500 mb-4 text-sm line-clamp-2">{post.data.description}</p>
+								<FormattedDate date={post.data.pubDate} />
+							</a>
+						</li>
+					))}
 				</ul>
 			</section>
 		</main>

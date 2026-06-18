@@ -12,38 +12,39 @@ interface Props {
 	image?: ImageMetadata;
 }
 
+const base = import.meta.env.BASE_URL;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const { title, description, image = FallbackImage } = Astro.props;
 
 // JSON-LD Structured Data for SEO
 const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": title,
-  "description": description,
-  "image": new URL(image.src, Astro.site),
-  "author": {
-    "@type": "Person",
-    "name": "Amir Ali" 
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": SITE_TITLE,
-    "url": Astro.site
-  }
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	"headline": title,
+	"description": description,
+	"image": new URL(image.src, Astro.site),
+	"author": {
+		"@type": "Person",
+		"name": "Amir Ali"
+	},
+	"publisher": {
+		"@type": "Organization",
+		"name": SITE_TITLE,
+		"url": Astro.site
+	}
 };
 ---
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="icon" href="/favicon.ico" />
-<link rel="sitemap" href={new URL('sitemap-index.xml', Astro.site)} />
+<link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+<link rel="icon" href={`${base}favicon.ico`} />
+<link rel="sitemap" href={new URL(`${base}sitemap-index.xml`, Astro.site)} />
 <link
 	rel="alternate"
 	type="application/rss+xml"
 	title={SITE_TITLE}
-	href={new URL('rss.xml', Astro.site)}
+	href={new URL(`${base}rss.xml`, Astro.site)}
 />
 <meta name="generator" content={Astro.generator} />
 
