@@ -54,7 +54,7 @@ const posts = (await getCollection('blog')).sort(
 						<span class="text-[0.85rem] text-[#999] mb-4 block">{post.data.pubDate.toLocaleDateString()}</span>
 						<h2 class="text-[1.5rem] mb-4 text-[#111]"><a href={`/blog/${post.id}/`} class="no-underline text-inherit">{post.data.title}</a></h2>
 						<p class="text-[#666] text-[0.95rem] leading-[1.6] flex-grow mb-8">{post.data.description}</p>
-						<a href={`/blog/${post.id}/`} class="inline-block text-[0.8rem] font-bold text-black border-b-[2px] border-black pb-[2px] self-start">Read Strategy</a>
+						<a href={`${import.meta.env.BASE_URL}blog/${post.id}/`} class="inline-block text-[0.8rem] font-bold text-black border-b-[2px] border-black pb-[2px] self-start">Read Strategy</a>
 					</article>
 				))}
 			</div>
