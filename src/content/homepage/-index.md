@@ -1,7 +1,7 @@
 ---
 banner:
-  title: "The B2B organic growth playbook, by Clienvora"
-  content: Rank on Google and get cited by AI search. Clienvora publishes the working system for B2B organic distribution, not recycled listicles. This is where founders and marketing leads get the tactics that actually move rankings. <br/> Read the strategy, then talk to us about your own setup.
+  title: "SEO, content writing, and content marketing, by Clienvora"
+  content: Guides, trends, comparisons, and free tools for anyone who publishes for organic search. Rank on Google, get cited by AI search, and turn content into a channel that compounds. <br/> Read the strategy, then talk to us about your own setup.
   image: /images/banner-art.png
   button:
     enable: true
@@ -10,31 +10,31 @@ banner:
 
 # feature
 feature:
-  title: "Why this blog exists"
+  title: "What you will find here"
   features:
-    - name: "Built for B2B"
+    - name: "SEO trends"
       icon: "/images/code.svg"
-      content: "Every guide is written for B2B SaaS and services buyers, not consumer traffic. The tactics target the searches that turn into pipeline."
-    - name: "Research-backed"
+      content: "Recaps of Google updates and AI search shifts, explained in plain language and tied to what you should actually do."
+    - name: "Content writing"
       icon: "/images/oop.svg"
-      content: "We cite current data from Seer, Previsible, and Google's own updates, so you can act on facts, not 2019 advice."
-    - name: "GEO-ready"
+      content: "Frameworks and examples for writing posts, pages, and newsletters that readers finish and search engines quote."
+    - name: "Content marketing"
       icon: "/images/user-clock.svg"
-      content: "Posts are structured so Perplexity, ChatGPT, and Google AI Overviews can quote them. Visibility now spans more than ten blue links."
-    - name: "Entity-first"
+      content: "Strategy, planning, and measurement, from content calendars to topical clusters that build authority."
+    - name: "Tool comparisons"
       icon: "/images/love.svg"
-      content: "We build topical authority and entity coherence, the signals Google and AI engines actually reward in 2026."
-    - name: "Faster indexing"
+      content: "Honest breakdowns of the tools people actually argue about, so you can pick without reading 12 reviews."
+    - name: "GEO ready"
       icon: "/images/speedometer.svg"
-      content: "Schema and indexing sequences that get your pages cited before the competition, at no added tool cost."
-    - name: "Brand voice"
+      content: "How to make your content quotable by Perplexity, ChatGPT, and Google AI Overviews, not just the ten blue links."
+    - name: "Free tools"
       icon: "/images/cloud.svg"
-      content: "B2B copy that sounds like a team that has done the work, not a template every competitor shipped."
+      content: "Checklists and templates you can use today, built from the same process we use with clients."
 
 # services
 services:
-  - title: "B2B SEO services that build authority"
-    content: "We diagnose the structural failures suppressing your rankings, then build the topical clusters and entity signals that compound. No manufactured output, no volume-for-volume's-sake. Just the highest-leverage fixes for your growth stage, backed by current search data."
+  - title: "SEO services that build authority"
+    content: "We diagnose the structural failures suppressing your rankings, then build the topical clusters and entity signals that compound. No manufactured output, no volume-for-volume's-sake. Just the highest-leverage fixes for your stage, backed by current search data."
     images:
       - "/images/service-slide-1.png"
       - "/images/service-slide-2.png"
@@ -45,7 +45,7 @@ services:
       link: https://www.clienvora.com/p/seo-services.html
 
   - title: "Copywriting that ranks and converts"
-    content: "We write B2B pages from your buyers' real language outward, so the copy persuades a human, survives an AI citation pass, and sounds like a person who has done the work. One discipline, not two separate teams competing for the same click."
+    content: "We write from your readers' real language outward, so the copy persuades a human, survives an AI citation pass, and sounds like a person who has done the work. One discipline, not two separate teams competing for the same click."
     images:
       - "/images/service-slide-1.png"
       - "/images/service-slide-2.png"
@@ -59,12 +59,12 @@ services:
 workflow:
   title: "Read the strategy, then ship the execution"
   image: /images/banner.png
-  description: "This blog is where we publish the thinking. The main site is where the work gets done for B2B teams in the US and beyond."
+  description: "This blog is where we publish the thinking. The main site is where the work gets done for teams that want help executing."
 
 # call_to_action
 call_to_action:
   title: "Not sure what your current strategy is costing you?"
-  content: "Most B2B sites are running a version of free SEO that quietly compounds a structural problem. We will show you the three highest-leverage fixes in your setup, with no obligation."
+  content: "Most sites are running a version of SEO that quietly compounds a structural problem. We will show you the three highest-leverage fixes in your setup, with no obligation."
   image: /images/cta.png
   button:
     enable: true
