@@ -4,7 +4,7 @@ meta_title: "The GEO Playbook: How to Optimize for AI Search"
 description: "A step-by-step GEO playbook: nine ordered tactics to get your brand cited by ChatGPT, Perplexity, and Google AI Overviews, plus a printable 15-point checklist."
 slug: "geo-playbook-how-to-optimize-for-ai-search"
 date: 2026-07-13T00:00:00Z
-image: "/images/blog-5.jpg"
+image: "/images/geo-playbook-how-to-optimize-for-ai-search.png"
 authors: ["Clienvora"]
 categories: ["GEO"]
 tags: ["GEO", "GEO Playbook", "AI Search"]

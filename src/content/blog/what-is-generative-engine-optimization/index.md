@@ -4,7 +4,7 @@ meta_title: "What Is Generative Engine Optimization? (2026 Definition)"
 description: "A plain-English definition of Generative Engine Optimization (GEO): what it is, where the term came from, how it differs from SEO and AEO, and why it matters for your traffic."
 slug: "what-is-generative-engine-optimization"
 date: 2026-07-13T00:00:00Z
-image: "/images/blog-1.jpg"
+image: "/images/what-is-generative-engine-optimization.png"
 authors: ["Clienvora"]
 categories: ["GEO"]
 tags: ["GEO", "Generative Engine Optimization", "AI Search"]

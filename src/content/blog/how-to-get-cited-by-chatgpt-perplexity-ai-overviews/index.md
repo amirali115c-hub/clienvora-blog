@@ -4,7 +4,7 @@ meta_title: "How to Get Cited by ChatGPT, Perplexity, and AI Overviews"
 description: "Engine-specific tactics to get cited by ChatGPT, Perplexity, Google Gemini, and Google AI Overviews, plus the six patterns that win citations across all four."
 slug: "how-to-get-cited-by-chatgpt-perplexity-ai-overviews"
 date: 2026-07-13T00:00:00Z
-image: "/images/blog-6.jpg"
+image: "/images/how-to-get-cited-by-chatgpt-perplexity-ai-overviews.png"
 authors: ["Clienvora"]
 categories: ["GEO"]
 tags: ["GEO", "ChatGPT", "Perplexity", "AI Overviews"]

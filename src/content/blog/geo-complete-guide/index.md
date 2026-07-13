@@ -4,7 +4,7 @@ meta_title: "Generative Engine Optimization (GEO): The 2026 Guide"
 description: "What generative engine optimization is, why AI search is eating Google traffic, and how to get your brand cited by ChatGPT, Perplexity, and Google AI Overviews. The complete GEO playbook hub."
 slug: "geo-complete-guide"
 date: 2026-07-13T00:00:00Z
-image: "/images/blog-6.jpg"
+image: "/images/geo-complete-guide.png"
 authors: ["Clienvora"]
 categories: ["GEO"]
 tags: ["GEO", "AI Search", "Generative Engine Optimization"]
