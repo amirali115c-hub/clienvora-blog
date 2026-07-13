@@ -1,0 +1,42 @@
+.subscribe-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.subscribe-row .form-input {
+  flex: 1 1 12rem;
+}
+
+.subscribe-row .btn {
+  white-space: nowrap;
+}
+
+.subscribe-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  color: var(--color-text, #4b5563);
+}
+
+.subscribe-consent input {
+  margin-top: 0.25rem;
+}
+
+.subscribe-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.subscribe-footer {
+  margin-top: 1.5rem;
+  max-width: 24rem;
+}
+
+.subscribe-footer .subscribe-form {
+  margin-top: 0.75rem;
+}

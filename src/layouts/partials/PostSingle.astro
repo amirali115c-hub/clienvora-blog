@@ -1,0 +1,125 @@
+---
+import Subscribe from "@/components/Subscribe.astro";
+import JsonLd from "@/components/JsonLd.astro";
+import Post from "@/layouts/components/Post.astro";
+import config from "@/config/config.json";
+import { markdownify } from "@/lib/utils/textConverter";
+import { Image } from "astro:assets";
+import { render } from "astro:content";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { sortByDate } from "@/lib/utils/sortFunctions";
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const { title, image, date, description } = post.data;
+
+const posts = await getSinglePage("blog");
+const related = sortByDate(posts)
+  .filter((p) => p.id !== post.id)
+  .slice(0, 3);
+
+const postUrl = `${config.site.base_url}/blog/${post.id}/`;
+const published = date ? new Date(date).toISOString() : new Date().toISOString();
+const modified = date ? new Date(date).toISOString() : new Date().toISOString();
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description: description || "",
+  image: image ? `${config.site.base_url}${image}` : `${config.site.base_url}${config.metadata.meta_image}`,
+  datePublished: published,
+  dateModified: modified,
+  author: {
+    "@type": "Organization",
+    name: config.site.title,
+    url: config.site.base_url,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: config.site.title,
+    url: config.site.base_url,
+    logo: {
+      "@type": "ImageObject",
+      url: `${config.site.base_url}${config.site.logo}`,
+    },
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": postUrl,
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: config.site.base_url,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Blog",
+      item: `${config.site.base_url}/blog`,
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: title,
+      item: postUrl,
+    },
+  ],
+};
+---
+
+<section class="section">
+  <div class="container">
+    <JsonLd data={articleSchema} />
+    <JsonLd data={breadcrumbSchema} />
+    <div class="row justify-center">
+      <div class="col-12 md:col-8">
+        <article class="text-center">
+          {
+            image && (
+              <Image
+                src={image}
+                height={500}
+                width={1000}
+                alt={title}
+                class="rounded-lg"
+              />
+            )
+          }
+          <h1 set:html={markdownify(title)} class="h2 text-left my-6" />
+
+          <div class="content mb-16 text-left">
+            <Content />
+          </div>
+
+          <div class="border-t border-border pt-8 text-left">
+            <Subscribe variant="inline" />
+          </div>
+        </article>
+      </div>
+    </div>
+
+    {
+      related.length > 0 && (
+        <div class="row mt-12">
+          <div class="col-12">
+            <h2 class="h3 mb-6 text-center">Keep reading</h2>
+          </div>
+          {related.map((p, i) => (
+            <div class="col-12 mb-8 sm:col-6 lg:col-4">
+              <Post post={p} index={i} />
+            </div>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</section>

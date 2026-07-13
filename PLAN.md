@@ -4,6 +4,7 @@
 that reinforces the authority, relevance, and traffic of the main site `www.clienvora.com`.
 
 **Hosting:** GitHub Pages (free) + Cloudflare DNS + custom subdomain (free SSL).
+**Theme:** Bigspring Light (Astro 7, Tailwind 4) rebranded to Clienvora (#bf3425 red, Roboto/Oswald).
 **Status legend:** [ ] todo · [~] in progress · [x] done
 
 ---
@@ -12,79 +13,61 @@ that reinforces the authority, relevance, and traffic of the main site `www.clie
 
 - Main site: `www.clienvora.com` (Blogger/Blogspot, live).
 - Support site: this Astro project, deploying to a custom subdomain `blog.clienvora.com`.
-- The support site is **technically separate** (own platform, own crawl, own indexing,
-  own Search Console property) but lives in the **same domain family**, so authority and
-  brand signals flow to `www.clienvora.com`.
+- The support site is **technically separate** but lives in the **same domain family**,
+  so authority and brand signals flow to `www.clienvora.com`.
 - Every piece of content links contextually back to relevant main-site pages.
-
-### Why subdomain over github.io
-| Setup | Cost | Authority to main site | Separation |
-|---|---|---|---|
-| github.io/clienvora-blog | Free | Weak (external, shared host) | Full |
-| **blog.clienvora.com** | Free | **Strong (same domain family)** | Full |
-| www.clienvora.com/blog (subfolder) | Free | Strongest | None (ties to Blogger) |
-
-### Crawl / indexing notes
-- Subdomain is crawled & indexed as its own host → its own crawl budget, own sitemap,
-  own robots.txt, own Search Console reports.
-- Does NOT consume www.clienvora.com crawl budget.
-- Crawl budget is a non-issue at this site's scale.
 
 ---
 
 ## Phase 1 — Foundation: domain, config, sitemap, indexing
 
-- [ ] 1.1 Decide target domain = `blog.clienvora.com` (DECIDED)
-- [x] 1.2 Cloudflare DNS: add CNAME record `blog` → `amirali115c-hub.github.io`
-- [x] 1.3 Add `public/CNAME` file containing `blog.clienvora.com`
-- [ ] 1.4 GitHub repo → Settings → Pages → set custom domain `blog.clienvora.com`, enforce HTTPS
-- [x] 1.5 Update `astro.config.mjs`: `site: 'https://blog.clienvora.com'`, remove `base`
-- [x] 1.6 Fix `public/robots.txt`: `Sitemap: https://blog.clienvora.com/sitemap-index.xml`
-- [x] 1.7 Update `src/consts.ts`: real title, description, author (remove "Astro Blog" placeholders)
-- [x] 1.8 Rebuild & verify generated sitemap URLs are all `blog.clienvora.com/...`
-- [ ] 1.9 Add site as URL-prefix property in Google Search Console (verify via meta tag / file)
-- [ ] 1.10 Submit `sitemap-index.xml`, confirm "Couldn't fetch" is resolved
+- [x] 1.1 Target domain = `blog.clienvora.com` (DECIDED)
+- [x] 1.2 Cloudflare DNS: CNAME `blog` → `amirali115c-hub.github.io`
+- [x] 1.3 `public/CNAME` = `blog.clienvora.com`
+- [x] 1.4 GitHub Pages custom domain set, SSL issued (valid Jul–Oct 2026)
+- [x] 1.5 `astro.config.mjs` site = `https://blog.clienvora.com`, no base
+- [x] 1.6 `robots.txt` → `Sitemap: https://blog.clienvora.com/sitemap-index.xml` (+ AI bot allow)
+- [x] 1.7 Branding via `src/config/config.json` + `theme.json` (title, #bf3425, logo, fonts)
+- [x] 1.8 Build verified: sitemap URLs all `blog.clienvora.com/...`
+- [ ] 1.9 Add site as URL-prefix property in Google Search Console
+- [ ] 1.10 Submit `sitemap-index.xml`, confirm fetch error resolved
 
-## Phase 2 — Authority reinforcement for www.clienvora.com
+## Phase 2 — Content (migrated to Bigspring theme)
 
-- [ ] 2.1 Contextual internal links from every post to relevant main-site pages (descriptive anchors)
-- [ ] 2.2 Canonical strategy: original content canonical to this site; never duplicate main-site posts
-- [ ] 2.3 Publish complementary content only (deep guides, glossaries, tools, case studies)
-- [ ] 2.4 Topical clustering around core themes: SEO, copywriting, GEO for B2B
-- [ ] 2.5 Consistent author/brand entity signals (bio, same social profiles, org info)
-- [ ] 2.6 Clean RSS + sitemap for Google and AI crawlers (GPTBot, PerplexityBot, ClaudeBot, etc.)
+- [x] 2.1 Real blog posts written (5): Free SEO, GEO, B2B copywriting, E-E-A-T, Topical clusters
+- [x] 2.2 Homepage rebranded (banner, features, services → SEO/copywriting, CTA)
+- [x] 2.3 FAQ rewritten (Clienvora-specific Q&A)
+- [x] 2.4 Privacy + Terms rewritten (Clienvora, removed Themefisher credit)
+- [x] 2.5 Demo Lorem posts removed; pricing page repurposed to "How We Work"
+- [x] 2.6 Contextual internal links to `www.clienvora.com` service pages from every post
 
-## Phase 3 — Modern design & features
+## Phase 3 — Design & features (handled by Bigspring theme)
 
-- [ ] 3.1 Header: sticky responsive nav, logo, links (Home, Blog, About, main-site CTA), mobile menu, dark/light toggle
-- [ ] 3.2 Footer: multi-column (brand blurb, quick links, resources, socials) + strong CTA to www.clienvora.com
-- [ ] 3.3 Subscribe: email capture wired to a static-friendly backend (Buttondown / MailerLite / ConvertKit / Cloudflare)
-- [ ] 3.4 Homepage: hero value prop, featured posts grid, CTA band to main site
-- [ ] 3.5 Blog index: modern cards, tags, reading time
-- [ ] 3.6 Post template: related posts, author box, share buttons, in-content CTA to main site
-- [ ] 3.7 SEO polish: meta tags, Open Graph / Twitter cards, JSON-LD (Article, Organization, Breadcrumb)
-- [ ] 3.8 Performance: image optimization (sharp), high Lighthouse scores
+- [x] 3.1 Header: sticky nav, Clienvora logo, links, mobile menu
+- [x] 3.2 Footer: multi-column menu + socials + CTA, Clienvora copyright
+- [~] 3.3 Contact form wired to Formspree placeholder (`config.params.contact_form_action`)
+- [x] 3.3b Newsletter system: Subscribe component (footer + post CTA + /subscribe page + /subscribe/thanks), Buttondown-ready config, GDPR consent + honeypot
+- [x] 3.4 Homepage hero + featured posts + CTA band
+- [x] 3.5 Blog index cards, post template with related/author/CTA
+- [x] 3.6 SEO: meta, OG/Twitter, JSON-LD (Organization + articles) via Astro; sitemap + robots for AI bots
+- [x] 3.6b RSS feed (`/rss.xml`) with auto-discovery for subscribers and AI readers
+- [x] 3.6c Related posts section on single post (internal linking / authority)
+- [x] 3.6d Author default = "Clienvora" (entity signal)
+- [x] 3.7 Performance: Astro image optimization, Tailwind 4
+- [x] 3.8 Headings use Oswald (brand), body Roboto; red accent applied
+- [~] 3.9 Cloudflare Web Analytics integration (config token placeholder, no cookie consent)
 
 ## Phase 4 — Verify & launch
 
-- [ ] 4.1 Local build + preview; confirm sitemap URLs correct
-- [ ] 4.2 Deploy via existing GitHub Actions workflow
-- [ ] 4.3 Resubmit sitemap in Search Console; request indexing
-- [ ] 4.4 Establish ongoing publishing + internal-linking routine
+- [x] 4.1 Local build clean (14 pages); CNAME, sitemap, robots confirmed
+- [~] 4.2 GitHub Actions updated to `npm install --legacy-peer-deps` (Astro 7 peer deps)
+- [ ] 4.3 Commit + push to main; confirm Pages deploy succeeds
+- [ ] 4.4 Resubmit sitemap in Search Console; request indexing
+- [ ] 4.5 Ongoing publishing + internal-linking routine
 
 ---
 
-## Honest caveat
-A single self-linking support site gives a modest, one-time boost, not a magic authority
-engine, and Google devalues obvious self-serving link networks. The compounding win comes
-from treating this as a **genuinely useful content hub** that earns its own traffic and
-links, then passes that value to the main site.
-
----
-
-## Current known issues (as of audit)
-- `astro.config.mjs` points to `amirali115c-hub.github.io` + base `/clienvora-blog/` (wrong for subdomain).
-- `robots.txt` sitemap line points to github.io URL (cross-domain → likely GSC fetch error).
-- `consts.ts` still has default "Astro Blog" / "Welcome to my website!" placeholders.
-- Header/Footer are default Astro starter components (need full redesign).
-- No subscribe feature yet.
+## Notes / known issues
+- Astro 7 peer deps: `astro-auto-import` and (removed) GTM not updated for Astro 7 → install with `--legacy-peer-deps`.
+- `src/content/pages/elements.mdx` is the theme's component demo (Lorem); not in nav, safe to leave or delete later.
+- Formspree `your-form-id` placeholder must be replaced before the contact form works.

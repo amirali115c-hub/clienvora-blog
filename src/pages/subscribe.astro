@@ -1,0 +1,31 @@
+---
+import Base from "@/layouts/Base.astro";
+import Subscribe from "@/components/Subscribe.astro";
+import config from "@/config/config.json";
+
+const { newsletter } = config.params;
+---
+
+<Base
+  title="Subscribe"
+  description="Get the B2B Organic Growth Dispatch from Clienvora."
+>
+  <section class="section">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="col-12 md:col-8 lg:col-6 text-center">
+          <h1 class="h2 mb-4" set:html={newsletter.title} />
+          <p class="mb-8" set:html={newsletter.description} />
+          <div class="card p-8">
+            <Subscribe variant="page" />
+          </div>
+          <p class="mt-6 text-sm">
+            One email a month with the B2B organic-growth tactics we use with
+            clients. No fluff, no spam. Unsubscribe anytime. Read our
+            <a href="/privacy-policy">privacy policy</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

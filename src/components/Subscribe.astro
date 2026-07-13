@@ -1,0 +1,52 @@
+---
+import config from "@/config/config.json";
+import { markdownify } from "@/lib/utils/textConverter";
+
+const { enable, title, description, action, redirect, tag } =
+  config.params.newsletter;
+const { variant = "inline" } = Astro.props;
+---
+
+{
+  enable && (
+    <div class={`subscribe subscribe-${variant}`}>
+      {title && (
+        <h3 class="h4 mb-2" set:html={markdownify(title)} />
+      )}
+      {description && (
+        <p class="mb-4" set:html={markdownify(description)} />
+      )}
+      <form class="subscribe-form" method="POST" action={action}>
+        <input type="hidden" name="tag" value={tag} />
+        <input type="hidden" name="redirect" value={redirect} />
+        <div class="subscribe-row">
+          <input
+            class="form-input w-full rounded"
+            type="email"
+            name="email"
+            placeholder="you@company.com"
+            required
+          />
+          <button type="submit" class="btn btn-primary">
+            Subscribe
+          </button>
+        </div>
+        <label class="subscribe-consent mt-2 block text-sm">
+          <input type="checkbox" name="gdpr_consent" required />
+          <span>
+            I agree to receive the newsletter and accept the{" "}
+            <a href="/privacy-policy">privacy policy</a>.
+          </span>
+        </label>
+        <input
+          type="text"
+          name="website"
+          tabindex="-1"
+          autocomplete="off"
+          class="subscribe-honeypot"
+          aria-hidden="true"
+        />
+      </form>
+    </div>
+  )
+}

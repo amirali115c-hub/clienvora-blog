@@ -1,16 +1,21 @@
-import { getCollection } from 'astro:content';
-import rss from '@astrojs/rss';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import rss from "@astrojs/rss";
+import config from "@/config/config.json";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { sortByDate } from "@/lib/utils/sortFunctions";
 
 export async function GET(context) {
-	const posts = await getCollection('blog');
-	return rss({
-		title: SITE_TITLE,
-		description: SITE_DESCRIPTION,
-		site: context.site,
-		items: posts.map((post) => ({
-			...post.data,
-			link: `/blog/${post.id}/`,
-		})),
-	});
+  const posts = sortByDate(await getSinglePage("blog"));
+  return rss({
+    title: config.site.title,
+    description: config.metadata.meta_description,
+    site: config.site.base_url,
+    items: posts.map((post) => ({
+      title: post.data.title,
+      description: post.data.description || "",
+      pubDate: post.data.date,
+      link: `/blog/${post.id}/`,
+      author: (post.data.authors && post.data.authors[0]) || "Clienvora",
+    })),
+    customData: `<language>en-us</language>`,
+  });
 }

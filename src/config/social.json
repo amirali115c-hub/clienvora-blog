@@ -1,0 +1,24 @@
+{
+  "main": [
+    {
+      "name": "website",
+      "icon": "FaGlobe",
+      "link": "https://www.clienvora.com"
+    },
+    {
+      "name": "whatsapp",
+      "icon": "FaWhatsapp",
+      "link": "https://wa.me/923204779972"
+    },
+    {
+      "name": "github",
+      "icon": "FaGithub",
+      "link": "https://github.com/amirali115c-hub"
+    },
+    {
+      "name": "linkedin",
+      "icon": "FaLinkedin",
+      "link": "https://www.linkedin.com/"
+    }
+  ]
+}

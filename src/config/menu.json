@@ -1,0 +1,77 @@
+{
+  "main": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "Blog",
+      "url": "/blog"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
+    },
+    {
+      "name": "FAQ",
+      "url": "/faq"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Clienvora",
+      "menu": [
+        {
+          "text": "Main Website",
+          "url": "https://www.clienvora.com"
+        },
+        {
+          "text": "SEO Services",
+          "url": "https://www.clienvora.com/p/seo-services.html"
+        },
+        {
+          "text": "Copywriting Services",
+          "url": "https://www.clienvora.com/p/copywriting-services.html"
+        }
+      ]
+    },
+    {
+      "name": "Resources",
+      "menu": [
+        {
+          "text": "Blog",
+          "url": "/blog"
+        },
+        {
+          "text": "How We Work",
+          "url": "/pricing"
+        },
+        {
+          "text": "Subscribe",
+          "url": "/subscribe"
+        },
+        {
+          "text": "FAQ",
+          "url": "/faq"
+        },
+        {
+          "text": "Contact",
+          "url": "/contact"
+        }
+      ]
+    },
+    {
+      "name": "Legal",
+      "menu": [
+        {
+          "text": "Privacy Policy",
+          "url": "/privacy-policy"
+        },
+        {
+          "text": "Terms & Conditions",
+          "url": "/terms-conditions"
+        }
+      ]
+    }
+  ]
+}

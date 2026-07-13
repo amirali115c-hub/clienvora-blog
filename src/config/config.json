@@ -1,0 +1,55 @@
+{
+  "site": {
+    "title": "Clienvora",
+    "base_url": "https://blog.clienvora.com",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.png",
+    "logo_width": "44",
+    "logo_height": "44",
+    "logo_text": "Clienvora"
+  },
+
+  "settings": {
+    "pagination": 6,
+    "summary_length": 200
+  },
+
+  "nav_button": {
+    "enable": true,
+    "label": "Visit Clienvora",
+    "link": "https://www.clienvora.com"
+  },
+
+  "params": {
+    "contact_form_action": "https://formspree.io/f/your-form-id",
+    "footer_content": "Clienvora helps B2B brands win organic growth through technical SEO, conversion copywriting, and GEO. This is our insights hub.",
+    "copyright": "© Clienvora. All rights reserved.",
+    "newsletter": {
+      "enable": true,
+      "title": "The B2B Organic Growth Dispatch",
+      "description": "One short, useful email each month on SEO, copywriting, and GEO for B2B. No fluff, no spam.",
+      "action": "https://buttondown.email/api/emails/embed-subscribe",
+      "redirect": "/subscribe/thanks",
+      "tag": "blog"
+    },
+    "cf_web_analytics_token": "",
+    "social": {
+      "github": "https://github.com/amirali115c-hub",
+      "linkedin": "",
+      "twitter": "",
+      "instagram": ""
+    }
+  },
+
+  "metadata": {
+    "meta_author": "Clienvora",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Actionable guides on SEO, copywriting, and GEO for B2B brands, from the team at Clienvora."
+  },
+  "google_tag_manager": {
+    "enable": false,
+    "gtm_id": "GTM-XXXXXX"
+  }
+}
