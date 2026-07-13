@@ -6,8 +6,7 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://amirali115c-hub.github.io',
-  base: '/clienvora-blog/',
+  site: 'https://blog.clienvora.com',
 
   // No 'fonts' array here ensures the build process won't crash
   integrations: [mdx(), sitemap()],
