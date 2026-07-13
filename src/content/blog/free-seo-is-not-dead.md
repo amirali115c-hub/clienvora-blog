@@ -167,3 +167,8 @@ If your organic traffic has plateaued, if you have published content consistentl
 Free SEO is not dead.
 
 The version you are running might be. The only way to determine which applies to your site is to look at the actual evidence. And that starts with knowing where to look.
+
+**Related reading**
+- [Google's 2026 Search Updates: What Actually Changed and What to Do About It](/blog/google-2026-search-updates/)
+- [Topical Authority Clusters: The Structure That Compounds](/blog/topical-authority-cluster/)
+- [E-E-A-T: Why Experience Beats Keywords](/blog/eeat-why-experience-beats-keywords/)

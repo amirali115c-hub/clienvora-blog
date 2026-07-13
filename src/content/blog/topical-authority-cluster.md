@@ -27,3 +27,8 @@ The structure does two things. It tells Google which page is authoritative on th
 List the three problems your buyers type into a search bar most often. Those are your first three clusters. For each, identify the one page that should own the intent, then audit whether your existing posts support it or compete with it. Consolidate the competitors. Link the supporters.
 
 This is the work that turns publishing from an expense into a moat. If you want a structured read of your current clusters, [contact Clienvora](https://www.clienvora.com) for an audit that shows which intents you own, which you are leaking, and what to build next.
+
+**Related reading**
+- [Google's 2026 Search Updates: What Actually Changed and What to Do About It](/blog/google-2026-search-updates/)
+- [Free SEO Is Not Dead. The Version You Are Running Might Be.](/blog/free-seo-is-not-dead/)
+- [E-E-A-T: Why Experience Beats Keywords](/blog/eeat-why-experience-beats-keywords/)
