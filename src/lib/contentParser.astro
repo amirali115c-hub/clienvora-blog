@@ -22,6 +22,7 @@ export const getSinglePage = async <C extends CollectionKey>(
 
   const removeDrafts = removeIndex.filter((data) => {
     const pageData = data.data as PageData;
+    if (import.meta.env.DEV) return true;
     return pageData.draft !== true;
   });
 

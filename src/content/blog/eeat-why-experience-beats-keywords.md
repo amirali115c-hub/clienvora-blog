@@ -34,3 +34,4 @@ If your pages read like they could have been written by anyone, that is the gap 
 - [Google's 2026 Search Updates: What Actually Changed and What to Do About It](/blog/google-2026-search-updates/)
 - [Free SEO Is Not Dead. The Version You Are Running Might Be.](/blog/free-seo-is-not-dead/)
 - [Topical Authority Clusters: The Structure That Compounds](/blog/topical-authority-cluster/)
+- [Generative Engine Optimization: The Complete 2026 Guide](/blog/geo-complete-guide/)

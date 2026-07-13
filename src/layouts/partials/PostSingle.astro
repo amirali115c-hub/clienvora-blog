@@ -18,9 +18,55 @@ const related = sortByDate(posts)
   .filter((p) => p.id !== post.id)
   .slice(0, 3);
 
-const postUrl = `${config.site.base_url}/blog/${post.id}/`;
+const postUrl = `${config.site.base_url}/blog/${post.data.slug ?? post.id}/`;
 const published = date ? new Date(date).toISOString() : new Date().toISOString();
 const modified = date ? new Date(date).toISOString() : new Date().toISOString();
+
+const siteSameAs = [
+  "https://www.clienvora.com",
+  "https://wa.me/923204779972",
+  "https://github.com/amirali115c-hub",
+  "https://www.linkedin.com/",
+];
+
+// Build FAQPage schema from the "## FAQ" markdown section
+const faqItems = (() => {
+  const body = post.body || "";
+  const m = body.match(/##\s*FAQ([\s\S]*?)(?=\n##\s|$)/i);
+  if (!m) return [];
+  const lines = m[1].split("\n");
+  const items = [];
+  let q = null;
+  let a = [];
+  const push = () => {
+    const answer = a.join(" ").trim().replace(/\*\*/g, "").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+    if (q && answer) items.push({ q: q.trim(), a: answer });
+  };
+  for (const line of lines) {
+    const qm = line.match(/^\*\*(.+?)\*\*\s*$/);
+    if (qm) {
+      push();
+      q = qm[1];
+      a = [];
+    } else if (q !== null) {
+      a.push(line);
+    }
+  }
+  push();
+  return items;
+})();
+
+const faqSchema = faqItems.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqItems.map((i) => ({
+        "@type": "Question",
+        name: i.q,
+        acceptedAnswer: { "@type": "Answer", text: i.a },
+      })),
+    }
+  : null;
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -34,11 +80,13 @@ const articleSchema = {
     "@type": "Organization",
     name: config.site.title,
     url: config.site.base_url,
+    sameAs: siteSameAs,
   },
   publisher: {
     "@type": "Organization",
     name: config.site.title,
     url: config.site.base_url,
+    sameAs: siteSameAs,
     logo: {
       "@type": "ImageObject",
       url: `${config.site.base_url}${config.site.logo}`,
@@ -80,6 +128,7 @@ const breadcrumbSchema = {
   <div class="container">
     <JsonLd data={articleSchema} />
     <JsonLd data={breadcrumbSchema} />
+    {faqSchema && <JsonLd data={faqSchema} />}
     <div class="row justify-center">
       <div class="col-12 md:col-8">
         <article class="text-center">
@@ -95,6 +144,15 @@ const breadcrumbSchema = {
             )
           }
           <h1 set:html={markdownify(title)} class="h2 text-left my-6" />
+
+          <p class="text-sm text-gray-500 mb-6">
+            Last updated:{" "}
+            {new Date(modified).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </p>
 
           <div class="content mb-16 text-left">
             <Content />

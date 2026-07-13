@@ -172,3 +172,4 @@ The version you are running might be. The only way to determine which applies to
 - [Google's 2026 Search Updates: What Actually Changed and What to Do About It](/blog/google-2026-search-updates/)
 - [Topical Authority Clusters: The Structure That Compounds](/blog/topical-authority-cluster/)
 - [E-E-A-T: Why Experience Beats Keywords](/blog/eeat-why-experience-beats-keywords/)
+- [Generative Engine Optimization: The Complete 2026 Guide](/blog/geo-complete-guide/)

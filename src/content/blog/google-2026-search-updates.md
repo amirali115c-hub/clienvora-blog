@@ -66,3 +66,4 @@ The update is not the story. The story is whether your content earns the signals
 - [Free SEO Is Not Dead. The Version You Are Running Might Be.](/blog/free-seo-is-not-dead/)
 - [Topical Authority Clusters: The Structure That Compounds](/blog/topical-authority-cluster/)
 - [E-E-A-T: Why Experience Beats Keywords](/blog/eeat-why-experience-beats-keywords/)
+- [Generative Engine Optimization: The Complete 2026 Guide](/blog/geo-complete-guide/)

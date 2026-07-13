@@ -32,3 +32,4 @@ This is the work that turns publishing from an expense into a moat. If you want 
 - [Google's 2026 Search Updates: What Actually Changed and What to Do About It](/blog/google-2026-search-updates/)
 - [Free SEO Is Not Dead. The Version You Are Running Might Be.](/blog/free-seo-is-not-dead/)
 - [E-E-A-T: Why Experience Beats Keywords](/blog/eeat-why-experience-beats-keywords/)
+- [Generative Engine Optimization: The Complete 2026 Guide](/blog/geo-complete-guide/)

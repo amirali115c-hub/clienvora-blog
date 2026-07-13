@@ -1,0 +1,24 @@
+# Clienvora Blog
+
+> Actionable guides on SEO, conversion copywriting, and Generative Engine Optimization (GEO) for B2B brands, from the team at Clienvora.
+
+## GEO hub
+
+- [Generative Engine Optimization: The Complete 2026 Guide](https://blog.clienvora.com/blog/geo-complete-guide/)
+- [What Is Generative Engine Optimization?](https://blog.clienvora.com/blog/what-is-generative-engine-optimization/)
+- [GEO vs SEO vs AEO](https://blog.clienvora.com/blog/geo-vs-seo-vs-aeo/)
+- [Best GEO Tools and AI Visibility Software](https://blog.clienvora.com/blog/best-geo-tools-ai-visibility-software/)
+- [GEO Services and Agencies](https://blog.clienvora.com/blog/geo-services-and-agencies/)
+- [The GEO Playbook](https://blog.clienvora.com/blog/geo-playbook-how-to-optimize-for-ai-search/)
+- [How to Get Cited by ChatGPT, Perplexity, and Google AI Overviews](https://blog.clienvora.com/blog/how-to-get-cited-by-chatgpt-perplexity-ai-overviews/)
+
+## SEO fundamentals
+
+- [Google's 2026 Search Updates](https://blog.clienvora.com/blog/google-2026-search-updates/)
+- [Free SEO Is Not Dead](https://blog.clienvora.com/blog/free-seo-is-not-dead/)
+- [Build a Topical Authority Cluster](https://blog.clienvora.com/blog/topical-authority-cluster/)
+- [E-E-A-T: Why Experience Beats Keywords](https://blog.clienvora.com/blog/eeat-why-experience-beats-keywords/)
+
+## Company
+
+- [Clienvora main site](https://www.clienvora.com)
