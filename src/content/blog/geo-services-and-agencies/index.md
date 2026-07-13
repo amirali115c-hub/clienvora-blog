@@ -216,15 +216,19 @@ If you want the foundational definitions before you score a vendor, start with [
 ## FAQ
 
 **How long until GEO results appear?**
+
 Baseline in week one. Citation movement usually shows in 30 to 90 days as signals compound. Off-domain placements and freshness work take the longest to lift, so judge progress at the 90-day mark, not week two.
 
 **Can a small business do GEO alone?**
+
 Yes for specific queries, using the playbook and free tools. An agency helps when you need off-domain reach fast. A small team can run the in-house pod above if someone owns the cadence and the data.
 
 **Does GEO guarantee sales?**
+
 No. GEO earns presence and trust. Your landing pages and offer convert that attention into revenue. The Profound and Bain analysis shows generative-engine visitors convert at about 4.4x traditional organic, but only if the downstream experience is built to close.
 
 **Why not just keep my SEO agency?**
+
 Keep them for SEO. Add GEO-specific work only if they can show off-domain citation strategy, not just on-page edits. The 90% third-party citation fact means on-page SEO alone cannot deliver GEO results.
 
 ## Related reading

@@ -228,21 +228,27 @@ Otterly, Peec AI, and ZipTie automate this across ChatGPT, Perplexity, and AI Ov
 ## FAQ
 
 **Do I need to rank number one to be cited?**
+
 No. ChatGPT cites about 12 percent of number one pages, but it also cites pages it retrieves lower down if they are the clearest source. Perplexity cites about 9.1 percent of number one pages for the same reason. Clarity beats position once you are in the reading set.
 
 **Why am I cited without a link?**
+
 Engines summarize and may name you without linking if the passage was extractable but the citation was dropped. Strong entity signals and a brand name inside the answer passage raise link accuracy. Consistent Organization schema and sameAs profiles make the source easy to anchor.
 
 **How often should I update for citations?**
+
 Within 30 days on key pages. Wellows found refreshed content earns 3.2x more citations than stale content, and 95 percent of ChatGPT citations come from sources under 10 months old. Set a monthly refresh cycle for pages you want cited.
 
 **Which engine should I prioritize?**
+
 Start with the one your buyers use. B2B leans ChatGPT and Perplexity; high intent discovery leans AI Overviews. Gemini matters when your entity needs recognition. Run a 50 prompt test on each before committing budget.
 
 **Does structured data actually change citations?**
+
 Yes. SEOcrawl found 71 percent of pages cited by ChatGPT include structured data. Article and FAQ schema expose extractable passages the engines lift into answers. Schema is not a ranking trick. It is a citation aid.
 
 **Can Preferred Sources replace ranking work?**
+
 No. The May 2026 Preferred Sources feature is an opt-in nudge for topics you already own. It multiplies solid pages, but it does not rescue content that fails retrieval or freshness. Earn the top 10 first, then use the feature.
 
 ## Related reading

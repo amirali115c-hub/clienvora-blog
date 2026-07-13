@@ -184,27 +184,35 @@ Our coverage of the [Google 2026 search updates](/blog/google-2026-search-update
 ## FAQ
 
 **Is GEO real or just a buzzword?**
+
 Real. The term comes from peer-reviewed research (KDD 2024) and is now tracked by commercial tools and requested by Google's own Preferred Sources feature.
 
 **Do I still need SEO if I do GEO?**
+
 Yes. Ahrefs found 76 percent of links cited in AI Overviews come from the top 10 organic results. SEO is the foundation GEO builds on.
 
 **How fast does GEO work?**
+
 A baseline takes a week. Early citation movement usually appears in 30 to 90 days as freshness and entity signals build.
 
 **Is GEO only for big brands?**
+
 No. Niche expertise gets cited when it is the clearest source. Broad branded terms favor established players, but specific factual queries are winnable for smaller sites.
 
 **What is the difference between a citation and a ranking?**
+
 A ranking is a link on a results page that the user must choose to click. A citation is your brand or data placed inside the answer the engine writes. Citation builds trust without requiring a click and converts at a higher rate.
 
 **Does ranking number one guarantee a citation?**
+
 No. Shadow found only about 11 to 12 percent of number-one Google pages are cited by ChatGPT, and about 9.1 percent in Perplexity. You must optimize specifically for retrieval and citation, not assume SEO wins carry over.
 
 **What is llms.txt and do I need it?**
+
 llms.txt is a file format Anthropic proposed in September 2024 that tells AI crawlers how to use your content. It now runs on tens of thousands of sites. It is a low-effort way to state your preferred citation context, but it does not replace the deeper retrieval and authority work.
 
 **How important is content freshness for GEO?**
+
 Very. Wellows found content refreshed within 30 days earns 3.2 times more citations than stale content, and 95 percent of ChatGPT citations come from sources under 10 months old. Schedule regular updates to keep pages in the retrievable window.
 
 ## Related reading

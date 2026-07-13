@@ -187,24 +187,31 @@ That sequence expands into nine steps in [The GEO Playbook](/blog/geo-playbook-h
 ## FAQ
 
 **Is GEO real or just a buzzword?**
+
 Real. It comes from peer-reviewed research (KDD 2024, Aggarwal et al. at Princeton, Georgia Tech, and the Allen Institute) and is now tracked by commercial tools and requested by Google's own Preferred Sources feature.
 
 **Do I still need SEO?**
+
 Yes. AI Overviews pull 76 percent of their citations from the top 10 organic results. GEO extends SEO, it does not replace it.
 
 **How long until I see citations?**
+
 Baseline in week one. Early movement in 30 to 90 days as freshness and entity signals build. Consistency matters more than speed.
 
 **Can a small site win citations?**
+
 Yes, especially on specific, factual queries. Broad branded terms favor established players, but niche expertise gets cited when it is the clearest source.
 
 **Does being cited guarantee a click?**
+
 No. GEO earns presence and trust. Pair it with strong landing pages to convert that attention.
 
 **What is the difference between retrieval and citation?**
+
 Retrieval is when an engine pulls your page as a candidate source. Citation is when it actually names you in the answer. Shadow found only 11 to 12 percent of number one pages get cited, so retrieval is necessary but not sufficient.
 
 **Do I need llms.txt and structured data?**
+
 Yes, as table stakes. SEOcrawl found 71 percent of ChatGPT-cited pages include structured data, and llms.txt helps crawlers read your site. They remove the reasons an engine skips you.
 
 ## Related reading

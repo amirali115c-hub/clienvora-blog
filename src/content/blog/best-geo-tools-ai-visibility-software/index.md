@@ -183,27 +183,35 @@ Freshness closes the loop. Wellows found content refreshed within 30 days earns 
 ## FAQ
 
 **Does Search Console track AI citations?**
+
 No. Google has stated there is no AI-specific Search Console report. A dedicated tool or manual audit is required.
 
 **Is llms.txt a tool?**
+
 No. It is a file that tells AI crawlers about your site. Some tools help generate it, but it is not tracking software.
 
 **Which tool for a small team?**
+
 Otterly AI for a cheap baseline, or Rankscale if you want fixes shipped, not just reported.
 
 **Can tools guarantee citations?**
+
 No tool guarantees a citation. They show where you stand and what to change. Execution and consistency earn the mention.
 
 **How often should I re-run my audit?**
+
 Run a full audit monthly. Wellows found content refreshed within 30 days earns 3.2x more citations than stale content, so a 30-day cadence matches how quickly visibility decays.
 
 **Do I need every engine a tool covers?**
+
 No. Match the engine list to where your buyers ask. Peec AI covers the widest set, but if your audience uses one assistant, a focused tool like Otterly AI is enough.
 
 **Why are my own pages losing to third-party sites?**
+
 More than 90 percent of AI citations come from third-party sources, not a brand's own site. Forums, publishers, and directories often win the mention, so track and influence those surfaces, not just your domain.
 
 **Should GEO replace my SEO program?**
+
 No. The two reinforce each other. Ahrefs found 76 percent of links cited in AI Overviews come from the top 10 organic results, so strong organic rankings are the foundation AI citations build on.
 
 ## Related reading

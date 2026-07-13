@@ -246,21 +246,27 @@ Print this and work top to bottom.
 ## FAQ
 
 **How fast does the playbook show results?**
+
 Baseline in week one. Early citation movement in 30 to 90 days as freshness and entity signals build. The 30 day refresh rule from Wellows is the lever that compounds first.
 
 **Do these steps guarantee a ranking?**
+
 No. They raise the odds of being cited. Consistency and off-domain presence do the rest. Shadow found only 11 to 12 percent of number one Google pages get cited by ChatGPT, so owned rank is never the whole story.
 
 **Which three steps first if I am short on time?**
+
 Open technical access, write answer-first, and add facts with sources. Highest lift, lowest effort. The Princeton study shows sources and statistics together deliver the largest early citation gains.
 
 **Is the checklist enough without tools?**
+
 Yes to start. Tools speed up tracking, but the nine steps work with manual prompt audits. A spreadsheet and a calendar cover most teams through the first two months.
 
 **Why does my number one Google ranking not show up in ChatGPT?**
+
 Ranking and citation are different systems. More than 90 percent of AI citations come from third-party sources, and only about 11 to 12 percent of top ranked pages get cited. You need off-domain presence and structure, not just rank.
 
 **How many prompts should I track for measurement?**
+
 Fifty is the floor. It gives enough coverage to see trends without becoming a chore. Expand to 100 once the cadence is a habit.
 
 ## Related reading

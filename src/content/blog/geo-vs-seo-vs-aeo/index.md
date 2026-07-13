@@ -169,21 +169,27 @@ The disciplines converge on one outcome. Rank to earn the click, answer to earn 
 ## FAQ
 
 **Will GEO replace SEO?**
+
 No. GEO extends SEO. AI Overviews cite pages that already rank, so the ranking work comes first. Ahrefs found 76 percent of links cited in AI Overviews come from the top 10 organic results, which means the foundation must exist before the citation can.
 
 **Is AEO just featured snippets?**
+
 Mostly, yes, with voice answers added. GEO is broader because it covers ChatGPT and Perplexity, not just Google's answer box. AEO optimizes a single extractable answer. GEO optimizes to be named as the source across many generated answers.
 
 **Can a small site win at GEO?**
+
 Yes, on specific factual and comparison queries. Broad branded terms favor established players, but clarity wins niche citations. Since 90 percent of citations come from third-party sources, a small site's mentions off its own domain matter as much as its homepage.
 
 **Do I need three separate strategies?**
+
 No. One well-structured page can rank, win a snippet, and earn a citation. The tactics reinforce each other. The Princeton/KDD 2024 study showed sources, statistics, and expert quotes lift citations, and those same elements help rankings and snippets.
 
 **How fast can I see GEO results?**
+
 Faster than classic SEO. SEO feedback runs in weeks to months, while GEO and AEO feedback runs in days to weeks because retrieval updates as pages refresh. Wellows found content refreshed within 30 days earns 3.2x more citations than stale content, so freshness is the fastest lever.
 
 **Does structured data guarantee a ChatGPT citation?**
+
 No. Structured data helps, but it is not the whole story. SEOcrawl found 71 percent of cited pages include structured data, meaning 29 percent do not. Off-domain presence and recency matter as much, and more than 90 percent of citations come from third-party sources rather than your own markup.
 
 ## Related reading
