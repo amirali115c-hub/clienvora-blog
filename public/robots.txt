@@ -19,4 +19,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://blog.clienvora.com/sitemap-index.xml
+Sitemap: https://blog.clienvora.com/sitemap.xml
