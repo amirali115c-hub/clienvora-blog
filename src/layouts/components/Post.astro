@@ -5,6 +5,7 @@ import { plainify } from "@/lib/utils/textConverter";
 
 const { post, index } = Astro.props;
 const { summary_length } = config.settings;
+const slug = post.data.slug ?? post.id;
 ---
 
 <div class="post">
@@ -20,10 +21,10 @@ const { summary_length } = config.settings;
     )
   }
   <h2 class="h3 mb-2 mt-4">
-    <a href={`/blog/${post.id}`} class="block hover:text-primary">
-      {post.data.title}
-    </a>
-  </h2>
-  <p set:html={plainify(post.body.slice(0, summary_length))} />
-  <a class="btn btn-primary mt-4" href={`/blog/${post.id}`}> Read More </a>
+      <a href={`/blog/${slug}`} class="block hover:text-primary">
+        {post.data.title}
+      </a>
+    </h2>
+    <p set:html={plainify(post.body.slice(0, summary_length))} />
+    <a class="btn btn-primary mt-4" href={`/blog/${slug}`}> Read More </a>
 </div>
