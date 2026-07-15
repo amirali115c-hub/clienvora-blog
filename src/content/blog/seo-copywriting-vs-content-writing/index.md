@@ -13,33 +13,6 @@ tags: ["SEO Copywriting", "Content Writing", "Copywriting", "SEO"]
 draft: false
 ---
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "SEO Copywriting vs Content Writing: What is the Real Difference in 2026?",
-  "description": "SEO copywriting converts. Content writing educates. This guide breaks down the difference with examples, rate comparisons, and a framework for when to use each.",
-  "image": "https://blog.clienvora.com/images/seo-copywriting-vs-content-writing.png",
-  "author": {
-    "@type": "Person",
-    "name": "Amir Ali",
-    "url": "https://clienvora.com",
-    "jobTitle": "SEO Content Writer and Conversion Copywriter",
-    "sameAs": [
-      "https://www.linkedin.com/in/amir-ali-23a3b1204",
-      "https://clienvora.com/p/portfolio.html"
-    ]
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Clienvora",
-    "url": "https://www.clienvora.com"
-  },
-  "datePublished": "2026-07-15",
-  "dateModified": "2026-07-15"
-}
-</script>
-
 SEO copywriting vs content writing is a distinction that determines whether your website generates revenue or just traffic. Both use keywords. Both need to rank. But they serve fundamentally different jobs in your marketing funnel.
 
 Confusing them is how high-traffic pages produce low conversion rates. SEO copywriting writes to convert the visitor who is already searching. Content writing writes to earn the visit in the first place. One closes. One opens. You need both, but you need to know which one a given page needs.

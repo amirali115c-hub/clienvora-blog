@@ -13,33 +13,6 @@ tags: ["Long-Form Content", "Short-Form Content", "Content Length", "SEO"]
 draft: false
 ---
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Long-Form vs Short-Form Content: Which Ranks Better in 2026?",
-  "description": "Does word count still matter for SEO in 2026? Here is the data on long-form vs short-form content rankings, engagement, and AI Overview citations.",
-  "image": "https://blog.clienvora.com/images/long-form-vs-short-form-content.png",
-  "author": {
-    "@type": "Person",
-    "name": "Amir Ali",
-    "url": "https://clienvora.com",
-    "jobTitle": "SEO Content Writer and Conversion Copywriter",
-    "sameAs": [
-      "https://www.linkedin.com/in/amir-ali-23a3b1204",
-      "https://clienvora.com/p/portfolio.html"
-    ]
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Clienvora",
-    "url": "https://www.clienvora.com"
-  },
-  "datePublished": "2026-07-15",
-  "dateModified": "2026-07-15"
-}
-</script>
-
 Long-form vs short-form content is a debate that has driven content strategy decisions for over a decade. The old rule was simple: longer content ranks better. Studies from 2018 through 2022 consistently showed that pages with 2,000+ words outperformed shorter pieces across most competitive keywords.
 
 That rule broke in 2024 when Google introduced passage-level indexing and AI Overviews entered wide release. Word count is no longer a ranking signal on its own. What matters now is whether your content matches the intent and format of the query, not how many words it contains.
