@@ -1,12 +1,12 @@
 ---
 banner:
-  title: "SEO, content writing, and content marketing, by Clienvora"
-  content: Guides, trends, comparisons, and free tools for anyone who publishes for organic search. Rank on Google, get cited by AI search, and turn content into a channel that compounds. <br/> Read the strategy, then talk to us about your own setup.
+  title: "Guides and insights on SEO, AI search, and B2B copywriting"
+  content: We publish actionable guides on technical SEO, conversion copywriting, and GEO for marketers who need their content to actually produce pipeline. Rank on Google. Get cited by ChatGPT and Perplexity. Turn organic into a compounding channel. Written by practitioners, refreshed quarterly.
   image: /images/banner-art.png
   button:
     enable: true
-    label: "Get a free audit"
-    link: "/contact"
+    label: "Read the Blog"
+    link: "/blog"
 
 # feature
 feature:
@@ -68,6 +68,6 @@ call_to_action:
   image: /images/cta.png
   button:
     enable: true
-    label: "Get a free audit"
+    label: "Get a Free SEO Audit"
     link: "/contact"
 ---

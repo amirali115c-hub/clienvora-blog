@@ -46,8 +46,8 @@ const websiteSchema = {
   <!-- banner -->
   <section class="section pb-[50px]">
     <div class="container">
-      <div class="row text-center">
-        <div class="mx-auto lg:col-10">
+      <div class="row items-center">
+        <div class="lg:col-6 text-center lg:text-left">
           <h1 class="font-primary font-bold">{banner?.title}</h1>
           {
             banner?.content && (
@@ -55,18 +55,25 @@ const websiteSchema = {
             )
           }
 
-          {
-            banner?.button?.enable && (
-              <a class="btn btn-primary mt-4" href={banner.button.link}>
-                {banner.button.label}
-              </a>
-            )
-          }
+          <div class="mt-6 flex flex-wrap justify-center lg:justify-start gap-4">
+            {
+              banner?.button?.enable && (
+                <a class="btn btn-primary" href={banner.button.link}>
+                  {banner.button.label}
+                </a>
+              )
+            }
+            <a class="btn btn-outline-primary" href="/subscribe">
+              Get the Dispatch
+            </a>
+          </div>
+        </div>
 
+        <div class="lg:col-6 mt-8 lg:mt-0">
           {
             banner?.image && (
               <Image
-                class="mx-auto mt-12"
+                class="mx-auto"
                 src={banner?.image}
                 width={750}
                 height={390}
